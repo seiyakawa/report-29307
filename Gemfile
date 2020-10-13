@@ -58,3 +58,6 @@ group :production do
 # 本番環境で使用
   gem 'rails_12factor'
 end
+
+# deviseの導入
+gem "devise"
