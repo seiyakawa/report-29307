@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'を半角英数字混合で入力してください' }
-  validates :nickname, presence: true
+  validates :nickname, presence: true, length: { maximum: 6 }
 end
