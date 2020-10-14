@@ -11,10 +11,9 @@ class ReportsController < ApplicationController
     Report.create(Report_params)
   end
 
-
   private
+
   def Report_params
     params.require(:report).permit(:date, :name, :purpose, :outcome, :action_plan)
   end
-
 end
