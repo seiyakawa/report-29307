@@ -31,6 +31,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem "rspec-rails"
+  gem "factory_bot_rails"
+  gem "faker"
 end
 
 group :development do
@@ -58,3 +61,9 @@ group :production do
 # 本番環境で使用
   gem 'rails_12factor'
 end
+
+# deviseの導入
+gem "devise"
+
+# binding.pry導入
+gem "pry-rails"
