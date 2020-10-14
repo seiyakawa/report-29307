@@ -67,3 +67,7 @@ gem "devise"
 
 # binding.pry導入
 gem "pry-rails"
+
+# 画像加工ツール導入
+gem "mini_magick"
+gem "image_processing", "~> 1.2"

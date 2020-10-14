@@ -1,6 +1,6 @@
 class ReportsController < ApplicationController
   def index
-    @reports = Report.all
+    @reports = Report.includes(:user)
   end
 
   def new
@@ -14,6 +14,6 @@ class ReportsController < ApplicationController
   private
 
   def Report_params
-    params.require(:report).permit(:date, :name, :purpose, :outcome, :action_plan)
+    params.require(:report).permit(:image, :date, :name, :purpose, :outcome, :action_plan).merge(user_id: current_user.id)
   end
 end
