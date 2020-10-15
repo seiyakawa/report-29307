@@ -6,6 +6,7 @@ class Report < ApplicationRecord
 
     # 空の投稿を保存できないように設定
     with_options presence: true do
+      validates :date
       validates :image
       validates :name
       validates :purpose

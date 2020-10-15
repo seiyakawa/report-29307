@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2020_10_14_114152) do
   end
 
   create_table "reports", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "date", null: false
+    t.date "date", null: false
     t.string "name", null: false
     t.text "purpose", null: false
     t.text "outcome", null: false
