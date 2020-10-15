@@ -2,7 +2,7 @@ class ReportsController < ApplicationController
   before_action :move_to_login, except: :index
 
   def index
-    @reports = Report.includes(:user).order("created_at DESC")
+    @reports = Report.includes(:user).order('created_at DESC')
   end
 
   def new
@@ -11,12 +11,12 @@ class ReportsController < ApplicationController
 
   def create
     @report = Report.new(report_params)
-   #バリデーションで問題があれば、保存はされず「投稿画面」に戻る
+    # バリデーションで問題があれば、保存はされず「投稿画面」に戻る
     if @report.valid?
       @report.save
       redirect_to root_path
     else
-      #保存されなければ、newに戻る
+      # 保存されなければ、newに戻る
       render 'new'
     end
   end
@@ -28,9 +28,6 @@ class ReportsController < ApplicationController
   end
 
   def move_to_login
-    unless user_signed_in?
-      redirect_to new_user_session_path
-    end     
+    redirect_to new_user_session_path unless user_signed_in?
   end
-
 end

@@ -42,7 +42,6 @@ describe Report do
         @report.valid?
         expect(@report.errors.full_messages).to include("Action plan can't be blank")
       end
-
     end
   end
 end
