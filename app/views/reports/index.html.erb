@@ -1,10 +1,9 @@
-<div class="contents row">
-  <% @reports.each do |report| %>
-    <div class="content_post" style="background-image: url(<%= report.image %>);">
-      <p><%= report.text %></p>
+<% @reports.each do |report| %>
+  <div class="contents row">
+    <%= image_tag report.image, class: "content_post" if report.image.attached? %>
+      <p><%= report.date %></p>
       <span class="name">
         <%= report.name %>
       </span>
-    </div>
-  <% end %>
-</div>
+  </div>
+<% end %>
