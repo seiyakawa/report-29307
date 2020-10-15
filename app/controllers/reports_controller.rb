@@ -1,6 +1,8 @@
 class ReportsController < ApplicationController
+  before_action :move_to_login, except: :index
+
   def index
-    @reports = Report.includes(:user)
+    @reports = Report.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -24,4 +26,11 @@ class ReportsController < ApplicationController
   def report_params
     params.require(:report).permit(:image, :date, :name, :purpose, :outcome, :action_plan, :other).merge(user_id: current_user.id)
   end
+
+  def move_to_login
+    unless user_signed_in?
+      redirect_to new_user_session_path
+    end     
+  end
+
 end
