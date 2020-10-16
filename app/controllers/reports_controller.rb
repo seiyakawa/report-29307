@@ -24,7 +24,22 @@ class ReportsController < ApplicationController
   def show
     @report = Report.find(params[:id])
   end
-  
+
+  def edit
+    @report = Report.find(params[:id])
+  end
+
+  def update
+    @report = Report.find(params[:id])
+    if @report.update(report_params)
+      redirect_to root_path
+    else
+      # 保存されなければ、editに戻る
+      render 'edit'
+    end
+
+  end
+
   private
 
   def report_params
