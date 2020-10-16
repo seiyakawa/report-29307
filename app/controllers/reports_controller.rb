@@ -1,6 +1,6 @@
 class ReportsController < ApplicationController
   before_action :move_to_login, except: [:index, :show]
-
+  before_action :set_report, only: [:show, :edit, :update]
   def index
     @reports = Report.includes(:user).order('created_at DESC')
   end
@@ -22,22 +22,24 @@ class ReportsController < ApplicationController
   end
 
   def show
-    @report = Report.find(params[:id])
   end
 
   def edit
-    @report = Report.find(params[:id])
   end
 
   def update
-    @report = Report.find(params[:id])
     if @report.update(report_params)
       redirect_to root_path
     else
       # 保存されなければ、editに戻る
       render 'edit'
     end
+  end
 
+  def destroy
+    report = Report.find(params[:id])
+    report.destroy
+    redirect_to root_path
   end
 
   private
@@ -49,4 +51,9 @@ class ReportsController < ApplicationController
   def move_to_login
     redirect_to new_user_session_path unless user_signed_in?
   end
+
+  def set_report
+    @report = Report.find(params[:id])
+  end
+
 end

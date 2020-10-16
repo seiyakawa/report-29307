@@ -8,7 +8,7 @@
     <%= render 'shared/error_messages', model: f.object %>
     
       <label class="form-text">日付</label>
-      <span class="indispensable">必須</span>
+      <span class="indispensable">*</span>
     </div>
     <div class='input-wrap'>
       <%= raw sprintf(
@@ -26,7 +26,7 @@
     <div class="img-upload">
       <div class="weight-bold-text">
         画像
-        <%# <span class="indispensable">必須</span> %>
+        <span class="indispensable">*</span>
       </div>
       <div class="click-upload">
         <p>
@@ -38,27 +38,26 @@
     <div class="new-reports">
       <div class="reports-name">
           顧客名
-        <%# <span class="indispensable">必須</span> %>
+        <span class="indispensable">*</span>
       </div>
       <%= f.text_area :name, class:"reports-text", id:"report-name", placeholder:"顧客名" %>
       <div class="reports-purpose">
          目的
-         <%# <span class="indispensable">必須</span> %>
+         <span class="indispensable">*</span>
       </div>
       <%= f.text_area :purpose, class:"reports-text", id:"report-purpose", placeholder:"目的" %>
       <div class="reports-text">
         学び
-        <%# <span class="indispensable">必須</span> %>
+        <span class="indispensable">*</span>
       </div>
       <%= f.text_area :outcome, class:"reports-text", id:"report-outcome", placeholder:"学び" %>
       <div class="repots-text">
         アクションプラン
-        <%# <span class="indispensable">必須</span> %>
+        <span class="indispensable">*</span>
       </div>
       <%= f.text_area :action_plan, class:"reports-text", id:"report-action", placeholder:"アクションプラン" %>
       <div class="reports-text">
          備考
-          <%# <span class="indispensable">必須</span> %>
       </div>
       <%= f.text_area :other, class:"reports-text", id:"report-other", placeholder:"備考" %>
     </div>

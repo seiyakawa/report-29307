@@ -5,7 +5,7 @@
       <%= devise_error_messages! %>
 
       <div class="field">
-        <%= f.label :nickname %> <em>(6文字以下)</em><br />
+        <%= f.label :nickname %> (6文字以下)<br />
         <%= f.text_field :nickname, autofocus: true %>
       </div>
 
@@ -17,7 +17,7 @@
       <div class="field">
         <%= f.label :password %>
         <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> 文字以上)</em>
+          (<%= @minimum_password_length %> 文字以上)
         <% end %><br />
         <%= f.password_field :password, autocomplete: "off" %>
       </div>
