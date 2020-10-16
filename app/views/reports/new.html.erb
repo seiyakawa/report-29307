@@ -32,7 +32,7 @@
         <p>
           クリックしてファイルをアップロード
         </p>
-        <%= f.file_field :image, id:"item-image" %>
+        <%= f.file_field :image, id:"report-image" %>
       </div>
     </div>
     <div class="new-reports">
@@ -47,10 +47,10 @@
       </div>
       <%= f.text_area :purpose, class:"reports-text", id:"report-purpose", placeholder:"目的" %>
       <div class="reports-text">
-        結果
+        学び
         <%# <span class="indispensable">必須</span> %>
       </div>
-      <%= f.text_area :outcome, class:"reports-text", id:"report-outcome", placeholder:"結果" %>
+      <%= f.text_area :outcome, class:"reports-text", id:"report-outcome", placeholder:"学び" %>
       <div class="repots-text">
         アクションプラン
         <%# <span class="indispensable">必須</span> %>
