@@ -1,0 +1,47 @@
+<%# 商品の概要 %>
+<div class="contents row">
+  <div class="content_post"><%= image_tag @report.image, class: "content_post" if @report.image.attached? %>
+      <% if user_signed_in? && current_user.id == @report.user_id %>
+        <div class="more">
+          <span><%= image_tag 'arrow_top.png' %></span>
+          <ul class="more_list">
+            <li>
+              <%= link_to '編集', edit_report_path(@report.id), method: :get %>
+            </li>
+            <li>
+              <%= link_to '削除', report_path(@report.id), method: :delete %>
+            </li>
+          </ul>
+        </div>
+      <% end %>
+      <p><%= @report.date %></p>
+      <span class="name">
+        顧客名：
+        <%= @report.name %>
+      </span>
+  </div>
+</div>
+  <div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-name">目的</th>
+          <td class="detail-value"><%= @report.purpose %></td>
+        </tr>
+        <tr>
+          <th class="detail-name">学び</th>
+          <td class="detail-value"><%= @report.outcome %></td>
+        </tr>
+        <tr>
+          <th class="detail-name">アクションプラン</th>
+          <td class="detail-value"><%= @report.action_plan %></td>
+        </tr>
+        <% if @report.other.present? %>
+          <tr>
+            <th class="detail-name">備考</th>
+            <td class="detail-value"><%= @report.other %></td>
+          </tr>
+        <% end %>
+
+      </tbody>
+    </table>

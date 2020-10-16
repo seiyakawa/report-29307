@@ -1,5 +1,5 @@
 class ReportsController < ApplicationController
-  before_action :move_to_login, except: :index
+  before_action :move_to_login, except: [:index, :show]
 
   def index
     @reports = Report.includes(:user).order('created_at DESC')
@@ -21,6 +21,10 @@ class ReportsController < ApplicationController
     end
   end
 
+  def show
+    @report = Report.find(params[:id])
+  end
+  
   private
 
   def report_params

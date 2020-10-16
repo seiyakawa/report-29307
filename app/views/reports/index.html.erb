@@ -1,9 +1,13 @@
 <% @reports.each do |report| %>
   <div class="contents row">
-    <%= image_tag report.image, class: "content_post" if report.image.attached? %>
+  <%= link_to report_path(report.id) do %>
+    <div class="content_post"><%= image_tag report.image, class: "content_post" if report.image.attached? %>
       <p><%= report.date %></p>
       <span class="name">
+        顧客名：
         <%= report.name %>
       </span>
+    </div>
+  <% end %>
   </div>
 <% end %>
