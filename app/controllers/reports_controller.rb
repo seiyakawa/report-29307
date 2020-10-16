@@ -55,5 +55,4 @@ class ReportsController < ApplicationController
   def set_report
     @report = Report.find(params[:id])
   end
-
 end
