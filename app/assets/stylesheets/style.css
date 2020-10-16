@@ -359,7 +359,7 @@ img,
 object,
 embed {
   max-width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 object,
@@ -1058,6 +1058,9 @@ footer p {
   width: 10%;
 }
 
+
+
+
  /* スマホ表示時 */
  @media (max-width: 560px) {
 
@@ -1420,7 +1423,7 @@ footer p {
   object,
   embed {
     max-width: 100%;
-    height: auto;
+    height: 100%;
   }
   
   object,
