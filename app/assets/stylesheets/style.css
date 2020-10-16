@@ -1060,7 +1060,6 @@ footer p {
 
  /* スマホ表示時 */
  @media (max-width: 560px) {
-  @charset "UTF-8";
 
   /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
   /* ==========================================================================
