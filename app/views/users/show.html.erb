@@ -1,19 +1,14 @@
 <div class="contents row">
+  <p><%= @nickname %>さんの投稿一覧</p>
   <% @reports.each do |report| %>
     <%= link_to report_path(report.id) do %>
       <div class="content_post">
         <%= image_tag report.image if report.image.attached? %>
         <p>顧客名：<%= report.name %></p>
         <span class="name">
-          <%= report.date %>
+         <%= report.date %>
         </span>
       </div>
     <% end %>
-    <div class="nickname">
-      <a href="/users/<%= report.user.id %>">
-        投稿者：
-      <%= report.user.nickname %>
-      </a>
-    </div>
   <% end %>
 </div>
