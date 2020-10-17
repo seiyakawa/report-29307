@@ -1,11 +1,11 @@
-.report-red-btn {
+.report-btn {
   text-align: center;
-  background-color: #ea352d;
+  background-color: lightgray;
   font-size: 15px;
-  font-weight: bold;
-  color: #FFF;
+  /* font-weight: bold; */
+  color: black;
   margin: 20px 0px;
-  padding: 2vh 10vw;
+  padding: 20px 100px;
 }
 
 .or-text {
@@ -13,21 +13,23 @@
 }
 
 .report-destroy {
-  background-color: lightgray;
+  background-color: #ea352d;
   text-align: center;
   font-size: 15px;
-  color: black;
+  font-weight: bold;
+  color: #FFF;
   margin: 20px 0px;
-  padding: 2vh 10vw;
+  padding: 20px 100px;
 }
 
 .report-box {
   width: 70vw;
   min-width: 1200px;
-  padding: 10vh 12vw 10vh 27vw;
+  padding: 5vh 12vw 5vh 27vw;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
+  justify-content: space-around;
 }
 
 .detail-table {
@@ -52,14 +54,13 @@
 
 /* スマホ表示時 */
 @media (max-width: 560px) {
-  .report-red-btn {
+  .report-btn {
     text-align: center;
-    background-color: #ea352d;
+    background-color: lightgray;
     font-size: 15px;
-    font-weight: bold;
-    color: #FFF;
+    color: black;
     margin: 20px 0px;
-    padding: 2vh 10vw;
+    padding: 20px 100px;
   }
   
   .or-text {
@@ -67,21 +68,23 @@
   }
   
   .report-destroy {
-    background-color: lightgray;
+    background-color: #ea352d;
     text-align: center;
     font-size: 15px;
-    color: black;
+    font-weight: bold;
+    color: #FFF;
     margin: 20px 0px;
-    padding: 2vh 10vw;
+    padding: 20px 100px;
   }
-  
+
   .report-box {
     width: 70vw;
-    min-width: 1200px;
-    padding: 10vh 12vw 10vh 27vw;
+    /* min-width: 1200px; */
+    padding: 5vh 12vw 5vh 12vw;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
+    justify-content: space-around;
   }
   
   .detail-table {
