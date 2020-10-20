@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'reports#index'
-  resources :reports
+  resources :reports do
+    resources :comments, only: :create
+  end
+
   resources :users, only: :show
 
   post "/homes_guest_sign_in", to: "homes#new_guest"
