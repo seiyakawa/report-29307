@@ -74,3 +74,6 @@ gem "image_processing", "~> 1.2"
 
 # 英語から日本語に変更
 gem "rails-i18n"
+
+# AWSのs3を使用できるようにするため
+gem "aws-sdk-s3", require: false
