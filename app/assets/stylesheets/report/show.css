@@ -25,7 +25,7 @@
 .report-box {
   width: 70vw;
   min-width: 1200px;
-  padding: 5vh 12vw 5vh 27vw;
+  padding: 5vh 11vw 5vh 27vw;
   display: flex;
   /* flex-direction: column; */
   align-items: center;
@@ -50,60 +50,4 @@
   padding: 20px;
   border: 1px solid #dedede;
   font-size: 14px;
-}
-
-/* スマホ表示時 */
-@media (max-width: 560px) {
-  .report-btn {
-    text-align: center;
-    background-color: lightgray;
-    font-size: 15px;
-    color: black;
-    margin: 20px 0px;
-    padding: 20px 100px;
-  }
-  
-  .or-text {
-    font-size: 20px;
-  }
-  
-  .report-destroy {
-    background-color: #ea352d;
-    text-align: center;
-    font-size: 15px;
-    font-weight: bold;
-    color: #FFF;
-    margin: 20px 0px;
-    padding: 20px 100px;
-  }
-
-  .report-box {
-    width: 70vw;
-    /* min-width: 1200px; */
-    padding: 5vh 12vw 5vh 12vw;
-    display: flex;
-    /* flex-direction: column; */
-    align-items: center;
-    justify-content: space-around;
-  }
-  
-  .detail-table {
-    margin-bottom: 30px;
-    width: 100%;
-  }
-  
-  .detail-name {
-    width: 20%;
-    background-color: #eee;
-    border: 1px solid #dedede;
-    font-size: 14px;
-    text-align: center;
-  }
-  
-  .detail-value {
-    width: 80%;
-    padding: 20px;
-    border: 1px solid #dedede;
-    font-size: 14px;
-  }  
 }

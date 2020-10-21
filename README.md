@@ -36,6 +36,7 @@ Things you may want to cover:
 ### Association
 
 - has_many :reports
+- has_many :comments
 
 ## reports テーブル
 
@@ -52,3 +53,17 @@ Things you may want to cover:
 ### Association
 
 - belongs_to :user
+- has_many :comments
+
+## comments テーブル
+
+| Column | Type       | Option                        |
+| ------ | ---------- | ----------------------------- |
+| text   | text       | null: false                   |
+| user   | references | null: false, foreign_key:true |
+| report | references | null: false, foreign_key:true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :report

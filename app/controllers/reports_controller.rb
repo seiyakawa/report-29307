@@ -22,6 +22,10 @@ class ReportsController < ApplicationController
   end
 
   def show
+    # commentを作成できるようにする
+    @comment = Comment.new
+    # reportに紐づけているコメントとユーザーをすべて取得
+    @comments = @report.comments.includes(:user)
   end
 
   def edit
