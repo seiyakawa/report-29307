@@ -1,7 +1,7 @@
 class Report < ApplicationRecord
   # アソシエーション 1対多
-  # belongs_to :user
-  # has_many :comments
+  belongs_to :user
+  has_many :comments
   # itemsテーブルのレコードと画像を紐づけるためにhas_one_attachedというメソッドを利用
   has_one_attached :image
 

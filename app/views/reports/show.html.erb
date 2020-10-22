@@ -65,11 +65,11 @@
     </div>
 
   <div class="report-box">
-    <%# <% if user_signed_in? && current_user.id == @report.user_id %> %>
+    <% if user_signed_in? && current_user.id == @report.user_id %>
       <%= link_to '編集', edit_report_path(@report.id), method: :get, class: "report-btn" %>
       <p class="or-text">or</p>
       <%= link_to '削除', report_path(@report.id), method: :delete, class: "report-destroy" %>
-    <%# <% end %> %>
+    <% end %>
   </div>
 
   <div class="sell-btn-contents">

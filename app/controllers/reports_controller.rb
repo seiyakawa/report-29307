@@ -2,7 +2,7 @@ class ReportsController < ApplicationController
   before_action :move_to_login, except: [:index, :show]
   before_action :set_report, only: [:show, :edit, :update]
   def index
-    @reports = Report.all #includes(:user).order('created_at DESC')
+    @reports = Report.includes(:user).order('created_at DESC')
   end
 
   def new
@@ -25,7 +25,7 @@ class ReportsController < ApplicationController
     # commentを作成できるようにする
     @comment = Comment.new
     # reportに紐づけているコメントとユーザーをすべて取得
-    # @comments = @report.comments.includes(:user)
+    @comments = @report.comments.includes(:user)
   end
 
   def edit
