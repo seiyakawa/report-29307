@@ -35,12 +35,8 @@ ActiveRecord::Schema.define(version: 2020_10_20_015646) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "text", null: false
-    t.bigint "user_id", null: false
-    t.bigint "report_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["report_id"], name: "index_comments_on_report_id"
-    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "reports", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -50,10 +46,8 @@ ActiveRecord::Schema.define(version: 2020_10_20_015646) do
     t.text "outcome", null: false
     t.text "action_plan", null: false
     t.text "other"
-    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_reports_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -70,7 +64,4 @@ ActiveRecord::Schema.define(version: 2020_10_20_015646) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "comments", "reports"
-  add_foreign_key "comments", "users"
-  add_foreign_key "reports", "users"
 end

@@ -7,7 +7,7 @@ class CreateReports < ActiveRecord::Migration[6.0]
       t.text :outcome,     null: false 
       t.text :action_plan, null: false 
       t.text :other
-      t.references :user,  null: false, foreign_key:true
+      # t.references :user,  null: false, foreign_key: true
       t.timestamps
     end
   end
