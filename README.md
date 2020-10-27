@@ -178,7 +178,10 @@ https://gyazo.com/c10b8563c43aa04e706e781302e16101
 
 # 10データベース設計
 ER図
-![ER図](https://gyazo.com/b7e24b079e489d915cf0926d91c32e5b "ER図")
+- usersテーブル
+- reportsテーブル
+- commentsテーブル
+https://gyazo.com/b7e24b079e489d915cf0926d91c32e5b
 
 # 11ローカルでの動作方法
 アプリケーションをcloneし、サーバーを立ち上げます。
@@ -191,3 +194,9 @@ ER図
 % rails db:migrate
 % rails s
 ```
+環境
+- macOS Catalina10.15.6
+- Ruby 2.6.5
+- DB: MYSQL
+- テキストエディタ: VSコード
+- rails 6.0.0
