@@ -90,8 +90,8 @@ https://report-29307.herokuapp.com/
 
 # 4テスト用アカウント
 ## basic認証
-Username:report
-Password:1111ログイン
+- Username:admin
+- Password:1111
 ## ログイン
 - 投稿者  
 Eメール：toukou@com  
