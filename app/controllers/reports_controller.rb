@@ -1,5 +1,5 @@
 class ReportsController < ApplicationController
-  before_action :move_to_login, except: [:index, :show]
+  before_action :move_to_login, except: [:index, :show, :search]
   before_action :set_report, only: [:show, :edit, :update]
   def index
     @reports = Report.includes(:user).order('created_at DESC')
@@ -44,6 +44,10 @@ class ReportsController < ApplicationController
     report = Report.find(params[:id])
     report.destroy
     redirect_to root_path
+  end
+
+  def search
+    @reports = Report.search(params[:keyword])
   end
 
   private
