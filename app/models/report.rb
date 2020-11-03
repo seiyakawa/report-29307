@@ -8,9 +8,9 @@ class Report < ApplicationRecord
   # whereメソッドとLIKE句を用いて検索の処理を追加
   def self.search(search)
     if search != ""
-      Report.where('name LIKE(?)', "%#{search}%")
+      Report.where('name LIKE(?)', "%#{search}%").order('created_at DESC')
     else
-      Report.all
+      Report.includes(:user).order('created_at DESC')
     end
   end
 
